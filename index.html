@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clash of Clans</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="Clash">
+        <h1 class="poppins-medium">Clash of Clans</h1>
+        <div class="image-center">
+            <img src="./aset/image.png" alt="Clash of Clans" class="clash-image">
+        </div>
+
+        <p class="txt-waktu" id="waktu"></p> <!-- Tambahkan elemen untuk menampilkan waktu -->
+        <br>
+        <div class="poppins-regular">Battle Strategy:</div>
+        <ul>
+            <li>Formulate an unbeatable attack plan</li>
+            <li>Train your troops and upgrade defenses</li>
+            <li>Conquer enemy bases and loot resources</li>
+        </ul>
+        <br>
+        <button onclick="show()">Check Clan</button>
+    </div>
+
+    <script>
+        function updateTime() {
+            var waktu = new Date();
+            var tanggal = waktu.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+            var jam = waktu.toLocaleTimeString();
+            document.getElementById("waktu").innerHTML = tanggal + " - " + jam;
+        }
+
+        // Memanggil fungsi updateTime setiap detik untuk memperbarui waktu secara real-time
+        setInterval(updateTime, 1000);
+    </script>
+    <script src="main.js"></script>
+</body>
+
+
+</html>
